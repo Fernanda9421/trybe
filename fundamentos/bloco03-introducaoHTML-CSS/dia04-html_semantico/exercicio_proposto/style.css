@@ -11,3 +11,24 @@ body {
     margin: 40px 0;
     font-family: 'Amatic SC', cursive;
 }
+
+.navigation {
+    display: inline-block;
+    width: 100%;
+}
+
+.navigation ul {
+    padding: 0;
+    text-align: center;
+}
+
+.navigation li {
+    display: inline-block;
+    list-style-type: none;
+    width: 120px;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
