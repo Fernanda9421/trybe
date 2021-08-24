@@ -69,3 +69,27 @@ td {
     text-align: center;
     padding: 5px;
 }
+
+.subtitle-curiosities {
+    font-size: 1.2em;
+    color: #00BFFF;
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+.aside {
+    position: fixed;
+    top: 70px;
+    right: 25px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.aside a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+}
