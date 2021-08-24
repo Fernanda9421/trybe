@@ -2,14 +2,20 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: auto;
+    max-width: 800px;
 }
 
-#title {
+.title {
     color: #00FFFF;
     text-align: center;
     margin: 40px 0;
     font-family: 'Amatic SC', cursive;
+    font-size: 4em;
+}
+
+.subtitle {
+    font-size: 3em;
 }
 
 .navigation {
@@ -31,4 +37,35 @@ body {
 .navigation a {
     color: #fff;
     text-decoration: none;
+}
+
+.title-information {
+    font-weight: normal;
+    font-size: 1.5em;
+    text-align: center;
+    color: #AFEEEE;
+}
+
+p {
+    line-height: 25px;
+    text-align: center;
+}
+
+.table {
+    margin: 50px auto;
+}
+
+caption {
+    margin: 20px auto;
+    color: #AFEEEE;
+}
+
+th {
+    color: #AFEEEE;
+}
+
+td {
+    width: 102px;
+    text-align: center;
+    padding: 5px;
 }
