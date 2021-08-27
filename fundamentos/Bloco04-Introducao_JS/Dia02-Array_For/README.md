@@ -1,4 +1,4 @@
-# JavaScript - Primeiros Passos
+# JavaScript - Array e Loop For
 
 O JavaScript é responsável pela grande maioria das interações em tempo real na web que é possível nos dias de hoje.
 
