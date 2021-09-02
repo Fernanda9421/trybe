@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+  <header>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragraphs">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="paragraphs">Segundo parágrafo!</p>
+  </header>
+  <script>
+    const paragraph = document.getElementById("paragraph");
+    paragraph.style.color = "red";
+    document.getElementById('page-title').innerText = "Anne with an E";
+    document.getElementById('second-paragraph').innerText = 'Anne with an E é uma série de televisão canadense baseada no livro de 1908, Anne of Green Gables, de Lucy Maud Montgomery e adaptada pela escritora e produtora vencedora do Emmy, Moira Walley-Beckett.';
+    document.getElementById('subtitle').innerText = 'A melhor série de todos os tempos.';
+    let paragraphs = document.querySelector('.paragraphs');
+    paragraphs.style.color = 'red';
+    let tag1 = document.getElementsByTagName('h4')[0];
+    tag1.style.color = 'yellow';
+  </script>
+</body>
+
+</html>
