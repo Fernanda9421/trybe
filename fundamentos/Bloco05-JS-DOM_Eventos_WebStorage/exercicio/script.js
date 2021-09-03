@@ -3,7 +3,6 @@
     - document.getElementById()
     - document.getElementsByClassName()
     - document.getElementsByTagName()
-Crie uma função que corrija o texto da tag <h1>.
 Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
@@ -22,3 +21,9 @@ function mainContent () {
 mainContent();
 
 // Crie uma função que mude a cor do quadrado vermelho para branco.
+function centerContent () {
+  document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+}
+centerContent();
+
+// Crie uma função que corrija o texto da tag <h1>.
