@@ -101,7 +101,15 @@
     }
     paragrafoSection();
 
-    // 6
+    // 7
+    function criaImagem () {
+      let paiLeftContent = document.querySelector('.main-content .left-content');
+      let imagem = document.createElement('img');
+      imagem.className = 'small-image';
+      imagem.src = 'https://picsum.photos/200';
+      paiLeftContent.appendChild(imagem);
+    }
+    criaImagem();
     
 
   </script>
