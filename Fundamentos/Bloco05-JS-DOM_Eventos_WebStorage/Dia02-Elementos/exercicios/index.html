@@ -61,6 +61,8 @@
   <script>
     // 1
     let paiBody = document.querySelector('body');
+    
+    
 
     function criaTitulo() {
       let criaTitulo = document.createElement('h1');
@@ -76,6 +78,15 @@
       paiBody.appendChild(criaMain);
     }
     tagMain();
+
+    // 3
+    function filhoMain () {
+      let paiMain = document.querySelector('.main-content');
+      let criaSection = document.createElement('section');
+      criaSection.className = 'center-content';
+      paiMain.appendChild(criaSection);
+    }
+    filhoMain();
 
   </script>
 </body>
