@@ -111,6 +111,23 @@
     }
     criaImagem();
     
+    // 8
+    function listaOrdenada () {
+      let paiRightContent = document.querySelector('.main-content .right-content');
+      let valores = [
+        'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'
+      ];
+      let listaOrdenada = document.createElement('ol');
+      paiRightContent.appendChild(listaOrdenada);
+      
+      for (let index = 0; index < valores.length; index += 1) {
+        let valor = valores[index];
+        let valoresLista = document.createElement('li');
+        valoresLista.innerText = valor;
+        listaOrdenada.appendChild(valoresLista);
+      }
+    }
+    listaOrdenada();
 
   </script>
 </body>
