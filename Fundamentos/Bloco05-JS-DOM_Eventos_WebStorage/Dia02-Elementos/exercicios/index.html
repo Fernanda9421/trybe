@@ -77,12 +77,15 @@
     }
     tagMain();
 
-    // 3
+    // 3 e 5
     function filhoMain () {
       let paiMain = document.querySelector('.main-content');
       let criaSection = document.createElement('section');
       criaSection.className = 'center-content';
       paiMain.appendChild(criaSection);
+      let criaSectionDois = document.createElement('section');
+      criaSectionDois.className = 'left-content';
+      paiMain.appendChild(criaSectionDois);
     }
     filhoMain();
 
@@ -94,6 +97,9 @@
       paiSection.appendChild(criaParagrafo);
     }
     paragrafoSection();
+
+    // 5
+    
 
   </script>
 </body>
