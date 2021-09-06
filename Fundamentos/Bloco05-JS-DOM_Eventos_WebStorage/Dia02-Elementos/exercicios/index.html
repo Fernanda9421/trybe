@@ -60,13 +60,22 @@
 <body>
   <script>
     // 1
+    let paiBody = document.querySelector('body');
+
     function criaTitulo() {
-      let paiBody = document.querySelector('body');
       let criaTitulo = document.createElement('h1');
       criaTitulo.innerText = 'Exercício 5.2 - JavaScript DOM';
       paiBody.appendChild(criaTitulo);
     }
     criaTitulo();
+
+    // 2
+    function tagMain() {
+      let criaMain = document.createElement('main');
+      criaMain.className = 'main-content';
+      paiBody.appendChild(criaMain);
+    }
+    tagMain();
 
   </script>
 </body>
