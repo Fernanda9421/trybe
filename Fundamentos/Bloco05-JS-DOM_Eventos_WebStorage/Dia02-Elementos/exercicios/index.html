@@ -62,8 +62,6 @@
     // 1
     let paiBody = document.querySelector('body');
     
-    
-
     function criaTitulo() {
       let criaTitulo = document.createElement('h1');
       criaTitulo.innerText = 'Exercício 5.2 - JavaScript DOM';
@@ -87,6 +85,15 @@
       paiMain.appendChild(criaSection);
     }
     filhoMain();
+
+    // 4
+    function paragrafoSection () {
+      let paiSection = document.querySelector('.center-content');
+      let criaParagrafo = document.createElement('p');
+      criaParagrafo.innerText = 'Também conhecida apenas como JS, JavaScript é uma linguagem de programação usada para desenvolver aplicações, sistemas e serviços de alta complexidade.';
+      paiSection.appendChild(criaParagrafo);
+    }
+    paragrafoSection();
 
   </script>
 </body>
