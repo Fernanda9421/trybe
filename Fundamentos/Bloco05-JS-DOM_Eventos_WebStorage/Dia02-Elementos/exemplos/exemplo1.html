@@ -47,6 +47,35 @@
     // Agora acesse o terceiroFilho a partir de pai
     document.querySelector('#pai').childNodes[5];
 
+    // Crie um irmão para elementoOndeVoceEsta
+    let elementoPai = document.querySelector('#pai');
+    let irmaoElementoOndeVoceEsta = document.createElement('section');
+
+    irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+    elementoPai.appendChild(irmaoElementoOndeVoceEsta);
+
+    // Crie um filho para elementoOndeVoceEsta 
+    let elementoPai2 = document.querySelector('#elementoOndeVoceEsta');
+    let filhoElementoOndeVoceEsta = document.createElement('section');
+
+    filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
+    elementoPai2.appendChild(filhoElementoOndeVoceEsta);
+
+    // Crie um filho para primeiroFilhoDoFilho
+    let elementoPai3 = document.querySelector('#primeiroFilhoDoFilho');
+    let filhoPrimeiroFilhoDoFilho = document.createElement('section');
+
+    filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
+    elementoPai3.appendChild(filhoPrimeiroFilhoDoFilho);
+
+    // A partir desse filho criado, acesse terceiroFilho
+    let acessarPai = filhoPrimeiroFilhoDoFilho.parentNode.parentNode;
+
+    acessarPai.nextElementSibling;
+
+    // Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho
+    
+
   </script>
 </body>
 
