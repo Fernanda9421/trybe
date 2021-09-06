@@ -59,7 +59,7 @@
 
 <body>
   <script>
-    // 1
+    // 1 e 10
     let paiBody = document.querySelector('body');
     
     function criaTitulo() {
@@ -130,7 +130,7 @@
     }
     listaOrdenada();
 
-    // 9
+    // 9 e 11
     function criaH3 () {
       let paiMain = document.querySelector('.main-content');
       for (let index = 1; index <= 3; index += 1) {
@@ -140,6 +140,15 @@
       }
     }
     criaH3();
+
+    // 12
+    function removeLeftContent () {
+      let paiMain = document.querySelector('.main-content');
+      let filhoMain = document.getElementsByClassName('left-content')[0];
+
+      paiMain.removeChild(filhoMain);
+    }
+    removeLeftContent();
 
   </script>
 </body>
