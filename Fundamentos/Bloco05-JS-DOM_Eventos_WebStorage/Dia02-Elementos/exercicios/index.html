@@ -119,7 +119,7 @@
       ];
       let listaOrdenada = document.createElement('ol');
       paiRightContent.appendChild(listaOrdenada);
-      
+
       for (let index = 0; index < valores.length; index += 1) {
         let valor = valores[index];
         let valoresLista = document.createElement('li');
@@ -128,6 +128,16 @@
       }
     }
     listaOrdenada();
+
+    // 9
+    function criaH3 () {
+      let paiMain = document.querySelector('.main-content');
+      for (let index = 1; index <= 3; index += 1) {
+        let criaH3 = document.createElement('h3');
+        paiMain.appendChild(criaH3);
+      }
+    }
+    criaH3();
 
   </script>
 </body>
