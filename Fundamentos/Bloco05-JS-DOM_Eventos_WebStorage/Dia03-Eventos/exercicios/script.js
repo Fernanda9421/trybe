@@ -48,7 +48,7 @@ function createButtonHoliday(string) {
 createButtonHoliday('Feriados');
 
 function changeBackgroundHoliday() {
-  let buttonHoliday = document.querySelector('#btn-holiday');  
+  let buttonHoliday = document.querySelector('#btn-holiday');
   let holidayDays = document.querySelectorAll('.holiday');
 
   buttonHoliday.addEventListener('click', function () {
@@ -64,7 +64,7 @@ function changeBackgroundHoliday() {
 changeBackgroundHoliday();
 
 
-function createButtonFriday (string) {
+function createButtonFriday(string) {
   let buttonsContainer = document.querySelector('.buttons-container');
   let buttonFriday = document.createElement('button');
   buttonFriday.id = 'btn-friday';
@@ -75,12 +75,12 @@ function createButtonFriday (string) {
 createButtonFriday('Sexta-feira');
 
 
-function changeTextButtonFriday () {
+function changeTextButtonFriday() {
   let buttonFriday = document.querySelector('#btn-friday');
   let fridayDay = document.querySelectorAll('.friday');
   let arrayFridays = [4, 11, 18, 25];
 
-  buttonFriday.addEventListener('click', function() {
+  buttonFriday.addEventListener('click', function () {
     for (let index = 0; index < fridayDay.length; index += 1) {
       if (fridayDay[index].innerText === '#Sextou') {
         fridayDay[index].innerText = arrayFridays[index];
@@ -91,3 +91,15 @@ function changeTextButtonFriday () {
   })
 }
 changeTextButtonFriday();
+
+// function mouseOver(event) {
+//   let daysOfWeek = document.querySelectorAll('.day');
+
+//   daysOfWeek[index].addEventListener('mouseover', function () {
+//     for (let index = 0; index < daysOfWeek.length; index += 1) {
+//       event.target.style.fontSize = '40px';
+//     };
+//   })
+// }
+
+// mouseOver();
