@@ -24,7 +24,7 @@ function createDays () {
     dayNumberItem.innerHTML = dayNumber;
 
     dayNumberItem.classList.add('day');
-    
+
     if (dayNumber === 24 || dayNumber === 25 || dayNumber === 31) {
       dayNumberItem.classList.add('holiday');
     }
@@ -36,3 +36,13 @@ function createDays () {
   }
 }
 createDays();
+
+function createButtonHoliday (string) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let buttonHoliday = document.createElement('button');
+  buttonHoliday.id = 'btn-holiday';
+  buttonHoliday.innerText = string;
+
+  buttonsContainer.appendChild(buttonHoliday);
+}
+createButtonHoliday('Feriados');
