@@ -115,15 +115,30 @@ function mouseLeave () {
 }
 mouseLeave();
 
-function createTasks (string, string2) {
+function createTasks (string) {
   let myTasks = document.querySelector('.my-tasks');
   let span = document.createElement('span');
-  let span2 = document.createElement('span');
   span.innerText = string;
-  span2.innerText = string2;
   span.style.display = 'block';
 
   myTasks.appendChild(span);
-  myTasks.appendChild(span2);
 }
-createTasks('Cozinhar', 'Projeto');
+createTasks('Cozinhar');
+createTasks('Projeto');
+
+
+function colorTasks (color1, color2) {
+  let myTasks = document.querySelectorAll('.my-tasks span');
+  let divColor = document.createElement('div');
+  let divColor2 = document.createElement('div')
+  divColor.classList.add('task');
+  divColor2.classList.add('task')
+  divColor.style.backgroundColor = color1;
+  divColor2.style.backgroundColor = color2;
+  divColor2.style.marginLeft = '30px'
+
+  myTasks[0].appendChild(divColor);
+  myTasks[1].appendChild(divColor2)
+
+}
+colorTasks('green', 'red');
