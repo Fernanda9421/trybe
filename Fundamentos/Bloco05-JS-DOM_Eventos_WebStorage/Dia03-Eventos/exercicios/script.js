@@ -114,3 +114,16 @@ function mouseLeave () {
   }
 }
 mouseLeave();
+
+function createTasks (string, string2) {
+  let myTasks = document.querySelector('.my-tasks');
+  let span = document.createElement('span');
+  let span2 = document.createElement('span');
+  span.innerText = string;
+  span2.innerText = string2;
+  span.style.display = 'block';
+
+  myTasks.appendChild(span);
+  myTasks.appendChild(span2);
+}
+createTasks('Cozinhar', 'Projeto');
