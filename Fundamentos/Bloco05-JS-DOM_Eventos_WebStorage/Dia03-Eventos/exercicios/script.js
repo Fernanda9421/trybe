@@ -163,3 +163,22 @@ function taskSelected() {
 }
 taskSelected();
 
+// exercicio 10
+function changeColorSeletedClass() {
+  let days = document.querySelectorAll('.day');
+
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener('click', function (event) {
+      let selectedClass = document.querySelector('.selected');
+      let color = selectedClass.style.backgroundColor;
+
+      if (event.target.style.color === 'green' || event.target.style.color === 'red') {
+        event.target.style.color = 'rgb(119,119,119)';
+      } else {
+        event.target.style.color = color;
+      }
+
+    })
+  }
+}
+changeColorSeletedClass();
