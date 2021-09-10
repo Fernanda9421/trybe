@@ -92,14 +92,25 @@ function changeTextButtonFriday() {
 }
 changeTextButtonFriday();
 
-// function mouseOver(event) {
-//   let daysOfWeek = document.querySelectorAll('.day');
 
-//   daysOfWeek[index].addEventListener('mouseover', function () {
-//     for (let index = 0; index < daysOfWeek.length; index += 1) {
-//       event.target.style.fontSize = '40px';
-//     };
-//   })
-// }
+function zoomDay () {
+  let day = document.querySelectorAll('.day');
 
-// mouseOver();
+  for (let index = 0; index < day.length; index += 1) {
+    day[index].addEventListener('mouseover', function(event) {
+      event.target.style.fontSize = '40px';
+    });
+  }
+};
+zoomDay();
+
+function mouseLeave () {
+  let day = document.querySelectorAll('.day');
+
+  for (let index = 0; index < day.length; index += 1) {
+    day[index].addEventListener('mouseleave', function(event) {
+      event.target.style.fontSize = '20px';
+    })
+  }
+}
+mouseLeave();
