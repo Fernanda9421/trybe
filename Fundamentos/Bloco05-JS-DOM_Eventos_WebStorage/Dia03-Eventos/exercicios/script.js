@@ -15,6 +15,7 @@ createDaysOfTheWeek();
 
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
+// exercício 1
 function createDays() {
   let weekDaysNumber = document.querySelector('#days');
 
@@ -37,6 +38,7 @@ function createDays() {
 }
 createDays();
 
+// exercicio 2
 function createButtonHoliday(string) {
   let buttonsContainer = document.querySelector('.buttons-container');
   let buttonHoliday = document.createElement('button');
@@ -47,6 +49,7 @@ function createButtonHoliday(string) {
 }
 createButtonHoliday('Feriados');
 
+// exercicio 3
 function changeBackgroundHoliday() {
   let buttonHoliday = document.querySelector('#btn-holiday');
   let holidayDays = document.querySelectorAll('.holiday');
@@ -63,7 +66,7 @@ function changeBackgroundHoliday() {
 }
 changeBackgroundHoliday();
 
-
+// exercicio 4
 function createButtonFriday(string) {
   let buttonsContainer = document.querySelector('.buttons-container');
   let buttonFriday = document.createElement('button');
@@ -74,7 +77,7 @@ function createButtonFriday(string) {
 }
 createButtonFriday('Sexta-feira');
 
-
+// exercicio 5
 function changeTextButtonFriday() {
   let buttonFriday = document.querySelector('#btn-friday');
   let fridayDay = document.querySelectorAll('.friday');
@@ -92,30 +95,31 @@ function changeTextButtonFriday() {
 }
 changeTextButtonFriday();
 
-
-function zoomDay () {
+// exercicio 6
+function zoomDay() {
   let day = document.querySelectorAll('.day');
 
   for (let index = 0; index < day.length; index += 1) {
-    day[index].addEventListener('mouseover', function(event) {
+    day[index].addEventListener('mouseover', function (event) {
       event.target.style.fontSize = '40px';
     });
   }
 };
 zoomDay();
 
-function mouseLeave () {
+function mouseLeave() {
   let day = document.querySelectorAll('.day');
 
   for (let index = 0; index < day.length; index += 1) {
-    day[index].addEventListener('mouseleave', function(event) {
+    day[index].addEventListener('mouseleave', function (event) {
       event.target.style.fontSize = '20px';
     })
   }
 }
 mouseLeave();
 
-function createTasks (string) {
+// exercicio 7
+function createTasks(string) {
   let myTasks = document.querySelector('.my-tasks');
   let span = document.createElement('span');
   span.innerText = string;
@@ -126,19 +130,36 @@ function createTasks (string) {
 createTasks('Cozinhar');
 createTasks('Projeto');
 
-
-function colorTasks (color1, color2) {
+// exercicio 8
+function colorTasks(color1, color2) {
   let myTasks = document.querySelectorAll('.my-tasks span');
   let divColor = document.createElement('div');
-  let divColor2 = document.createElement('div')
+  let divColor2 = document.createElement('div');
   divColor.classList.add('task');
-  divColor2.classList.add('task')
+  divColor2.classList.add('task');
   divColor.style.backgroundColor = color1;
   divColor2.style.backgroundColor = color2;
-  divColor2.style.marginLeft = '30px'
+  divColor2.style.marginLeft = '30px';
 
   myTasks[0].appendChild(divColor);
-  myTasks[1].appendChild(divColor2)
+  myTasks[1].appendChild(divColor2);
 
 }
 colorTasks('green', 'red');
+
+// exercicio 9
+function taskSelected() {
+  let divMyTask = document.querySelectorAll('.task');
+
+  for (let index = 0; index < divMyTask.length; index += 1) {
+    divMyTask[index].addEventListener('click', function (event) {
+      if (event.target.classList.length === 1) {
+        event.target.classList.add('selected');
+      } else {
+        event.target.classList.remove('selected');
+      }
+    })
+  }
+}
+taskSelected();
+
