@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <title>Formulário</title>
+</head>
+
+<body>
+  <header>
+    <h1>Formulário para cadastro de currículos</h1>
+    <p>Preencha as informações abaixo</p>
+  </header>
+
+  <main>
+    <form action="" method="GET">
+      <section class="general-data">
+        <fieldset>
+          <h2>Informações Pessoais</h2>
+          <div class="line-content">
+            <label for="name">Nome:
+              <input type="text" maxlength="40" name="name" id="name" required placeholder="Digite seu nome">
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="email">E-mail:
+              <input type="text" maxlength="50" name="email" id="email" required placeholder="Digite seu email">
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="cpf">CPF:
+              <input type="text" maxlength="11" name="cpf" id="cpf" required placeholder="Digite seu CPF">
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="adress">Endereço:
+              <input type="text" maxlength="200" name="adress" id="adress" required placeholder="Digite seu logradouro">
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="city">Cidade:
+              <input type="text" maxlength="28" name="city" id="city" required placeholder="Digite a cidade que reside">
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="state">Estado:
+              <select name="state" id="state" required placeholder="Digite um breve resumo do seu currículo">
+              </select>
+            </label>
+          </div>
+          <div class="line-content">
+            <label>Tipo:
+              <label><input type="radio" name="type" id="typeOne" value="type" required>Casa</label>
+              <label><input type="radio" name="type" id="typeTwo" value="type" required>Apartamento</label>
+            </label>
+        </fieldset>
+        </div>
+      </section>
+
+      <section class="general-data">
+        <fieldset>
+          <h2>Última experiência profissional</h2>
+          <div class="line-content">
+            <label for="abstract">Resumo do currículo:
+              <textarea name="abstract" maxlength="1000" id="abstract" cols="60" rows="10" required></textarea>
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="position">Cargo:
+              <input type="text" maxlength="40" name="position" id="position" required>
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="position-description">Descrição do Cargo:
+              <input type="text" maxlength="500" name="position-description" id="position-description" required>
+            </label>
+          </div>
+          <div class="line-content">
+            <label for="date">Data de Início:
+              <input type="text" name="date" id="date" placeholder="dd/mm/aaaa" required>
+            </label>
+          </div>
+          <div id="button-container">
+            <button type="submit" id="button">Enviar</button>
+          </div>
+        </fieldset>
+      </section>
+
+    </form>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
