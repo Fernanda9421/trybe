@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/exemplo2/style.css">
 </head>
 
 <body>
@@ -16,8 +17,8 @@
   </header>
 
   <main>
-    <form action="" method="GET" class="">
-      <section>
+    <form action="" method="GET">
+      <section class="datas">
         <fieldset>
           <h2 class="fs-4">Informações Pessoais</h2>
           <div class="mb-3">
@@ -66,12 +67,12 @@
         </div>
       </section>
 
-      <section>
+      <section class="datas">
         <fieldset>
           <h2 class="fs-4">Última experiência profissional</h2>
           <div class="mb-3">
             <label class="form-label" for="abstract">Resumo do currículo:
-            <textarea class="form-control" placeholder="Digite um pequeno resumo do seu currículo" name="abstract" maxlength="1000" id="abstract" cols="60" rows="10"
+            <textarea class="form-control" placeholder="Digite um pequeno resumo do seu currículo" name="abstract" maxlength="1000" id="abstract" cols="109" rows="10"
               required></textarea>
             </label>
           </div>
@@ -88,7 +89,7 @@
             <input class="form-control" type="text" name="date" id="date" placeholder="dd/mm/aaaa" required>
           </div>
           <div>
-            <button class="btn btn-secondary" type="submit" id="button">Enviar</button>
+            <button class="btn btn-success" type="submit" id="button">Enviar</button>
           </div>
         </fieldset>
       </section>

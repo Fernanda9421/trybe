@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(229, 229, 229);
+  margin: 20px 50px;
+}
+
+.text-center {
+  margin-bottom: 40px;
+}
+
+.datas {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.fs-4 {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 8px 18px;
+}
