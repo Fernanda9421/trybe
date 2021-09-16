@@ -16,75 +16,79 @@
   </header>
 
   <main>
-    <form action="" method="GET" class="" >
-      <section class="">
+    <form action="" method="GET" class="">
+      <section>
         <fieldset>
-          <h2>Informações Pessoais</h2>
-          <div class="">
-            <label for="name">Nome:
-              <input class="" type="text" maxlength="40" name="name" id="name" required placeholder="Digite seu nome">
-            </label>
+          <h2 class="fs-4">Informações Pessoais</h2>
+          <div class="mb-3">
+            <label class="form-label" for="name">Nome:</label>
+            <input class="form-control" type="text" maxlength="40" name="name" id="name" required
+              placeholder="Digite seu nome">
           </div>
-          <div class="">
-            <label for="email">E-mail:
-              <input class="" type="text" maxlength="50" name="email" id="email" required placeholder="Digite seu email">
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="email">E-mail:</label>
+            <input class="form-control" type="text" maxlength="50" name="email" id="email" required
+              placeholder="Digite seu email">
           </div>
-          <div class="">
-            <label for="cpf">CPF:
-              <input class="" type="text" maxlength="11" name="cpf" id="cpf" required placeholder="Digite seu CPF">
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="cpf">CPF:</label>
+            <input class="form-control" type="text" maxlength="11" name="cpf" id="cpf" required
+              placeholder="Digite seu CPF">
           </div>
-          <div class="">
-            <label for="adress">Endereço:
-              <input class="" type="text" maxlength="200" name="adress" id="adress" required placeholder="Digite seu logradouro">
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="adress">Endereço:</label>
+            <input class="form-control" type="text" maxlength="200" name="adress" id="adress" required
+              placeholder="Digite seu logradouro">
           </div>
-          <div class="">
-            <label for="city">Cidade:
-              <input class="" type="text" maxlength="28" name="city" id="city" required placeholder="Digite a cidade que reside">
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="city">Cidade:</label>
+            <input class="form-control" type="text" maxlength="28" name="city" id="city" required
+              placeholder="Digite a cidade que reside">
           </div>
-          <div class="">
+          <div class="mb-3">
             <label for="state">Estado:
-              <select class="" name="state" id="state" required placeholder="Digite um breve resumo do seu currículo">
+              <select class="form-select" name="state" id="state" required
+                placeholder="Digite um breve resumo do seu currículo">
               </select>
             </label>
           </div>
-          <div class="">
-            <label>Tipo:
-              <label><input type="radio" class="" name="type" id="typeOne" value="type" required>Casa</label>
-              <label><input type="radio" class="" name="type" id="typeTwo" value="type" required>Apartamento</label>
-            </label>
+          <div class="mb-3">
+            <p>Tipo:</p>
+            <div class="form-check">
+              <input type="radio" class="" name="type" id="typeOne" value="type" required>
+              <label for="typeOne">Casa</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="" name="type" id="typeTwo" value="type" required>
+              <label for="typeTwo">Apartamento</label>
+            </div>
         </fieldset>
         </div>
       </section>
 
-      <section class="">
+      <section>
         <fieldset>
-          <h2>Última experiência profissional</h2>
-          <div class="">
-            <label for="abstract">Resumo do currículo:
-              <textarea class="" name="abstract" maxlength="1000" id="abstract" cols="60" rows="10" required></textarea>
+          <h2 class="fs-4">Última experiência profissional</h2>
+          <div class="mb-3">
+            <label class="form-label" for="abstract">Resumo do currículo:
+            <textarea class="form-control" placeholder="Digite um pequeno resumo do seu currículo" name="abstract" maxlength="1000" id="abstract" cols="60" rows="10"
+              required></textarea>
             </label>
           </div>
-          <div class="">
-            <label for="position">Cargo:
-              <input class="" type="text" maxlength="40" name="position" id="position" required>
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="position">Cargo:</label>
+            <input class="form-control" placeholder="Cargo pretendido" type="text" maxlength="40" name="position" id="position" required>
           </div>
-          <div class="">
-            <label for="positionDescription">Descrição do Cargo:
-              <input class="" type="text" maxlength="500" name="positionDescription" id="positionDescription" required>
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="positionDescription">Descrição do Cargo:</label>
+            <input class="form-control" type="text" maxlength="500" name="positionDescription" id="positionDescription" required>
           </div>
-          <div class="">
-            <label for="date">Data de Início:
-              <input class="" type="text" name="date" id="date" placeholder="dd/mm/aaaa" required>
-            </label>
+          <div class="mb-3">
+            <label class="form-label" for="date">Data de Início:</label>
+            <input class="form-control" type="text" name="date" id="date" placeholder="dd/mm/aaaa" required>
           </div>
-          <div id="">
-            <button class="" type="submit" id="button">Enviar</button>
+          <div>
+            <button class="btn btn-secondary" type="submit" id="button">Enviar</button>
           </div>
         </fieldset>
       </section>
