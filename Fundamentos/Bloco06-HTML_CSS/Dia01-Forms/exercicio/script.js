@@ -59,3 +59,8 @@ const verifyDate = () => {
   }
 }
 button.addEventListener('click', verifyDate);
+
+const preventDefault = (event) => {
+  event.preventDefault();
+}
+button.addEventListener('click', preventDefault);
