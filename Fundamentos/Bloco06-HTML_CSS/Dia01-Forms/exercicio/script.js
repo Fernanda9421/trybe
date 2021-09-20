@@ -39,3 +39,23 @@ const statesOfBrazil = () => {
   }
 }
 statesOfBrazil();
+
+const button = document.querySelector('#button');
+const verifyDate = () => {
+  const inputDate = document.querySelector('#date').value;
+  const separateDate = inputDate.split('/');
+  const day = separateDate[0];
+  const month = separateDate[1];
+  const year = separateDate[2];
+
+  if (day < 0 || day > 31) {
+    alert ('Dia inválido');
+  }
+  if (month < 0 || month > 12) {
+    alert ('Mês inválido');
+  }
+  if (year < 0) {
+    alert ('Ano inválido');
+  }
+}
+button.addEventListener('click', verifyDate);
