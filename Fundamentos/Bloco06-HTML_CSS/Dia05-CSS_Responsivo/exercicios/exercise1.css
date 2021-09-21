@@ -11,7 +11,7 @@ h1 {
 }
 
 section p {
-  margin: 0.8em;
+  margin: 1em;
 }
 
 h2 {
@@ -24,5 +24,6 @@ img {
 }
 
 figure {
-  margin-bottom: 25px;
+  margin: 25px;
+  padding: 40px;
 }
