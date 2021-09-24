@@ -8,8 +8,8 @@ const coolestTvShow = {
 };
 
 for (let key in coolestTvShow) {
-  console.log(key);
-  console.log(coolestTvShow[key]);
+  console.log(key); // lista as chaves
+  console.log(coolestTvShow[key]); // lista os valores
 }
 
 // const student1 = {
