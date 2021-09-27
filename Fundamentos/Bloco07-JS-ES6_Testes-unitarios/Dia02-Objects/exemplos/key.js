@@ -4,13 +4,13 @@ const customer = {
   job: 'Teacher',
 };
 
-// let newKey = 'lastName';
-// const lastName = 'Ferreira';
-// customer[newKey] = lastName;
-// newKey = 'fullName';
-// const fullName = `${customer.firstName} ${customer.lastName}`;
-// customer[newKey] = fullName;
-// console.log(customer);
+let newKey = 'lastName';
+const lastName = 'Ferreira';
+customer[newKey] = lastName;
+newKey = 'fullName';
+const fullName = `${customer.firstName} ${customer.lastName}`;
+customer[newKey] = fullName;
+console.log(customer);
 
 const objectKeys = (object, key, value) => {
   const person = object;
