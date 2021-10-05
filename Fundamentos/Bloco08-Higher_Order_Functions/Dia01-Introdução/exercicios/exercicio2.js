@@ -11,16 +11,3 @@ const drawResult = (betNumber, checkNumber) => {
 };
 
 console.log(drawResult(4, checkNumber));
-
-// EXEMPLO 2:
-
-const print = (msg) => {
-  console.log(msg);
-}
-
-const helloWorld = (print)=> {
- return print('hello world');
-}
-
-
-helloWorld(print);
