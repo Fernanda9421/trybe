@@ -186,3 +186,18 @@ function oldBooksOrdered() {
   }).sort((a, b) => a.releaseYear - b.releaseYear);
 }
 assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
+
+// 5. Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+const expectedResult5 = [
+  'Frank Herbert',
+  'George R. R. Martin',
+  'Isaac Asimov',
+  'J. R. R. Tolkien',
+];
+
+function fantasyOrScienceFictionAuthors() {
+  return books.filter((book) => {
+    return book.genre === 'Fantasia' || book.genre === 'Ficção Científica'
+  }).map((book) => book.author.name).sort();
+}
+assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult5);
