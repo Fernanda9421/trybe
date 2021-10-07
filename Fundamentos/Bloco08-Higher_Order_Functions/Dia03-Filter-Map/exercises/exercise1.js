@@ -182,7 +182,7 @@ const expectedResult4 = [
 
 function oldBooksOrdered() {
   return books.filter((book) => {
-    return oldBooks = 2021 - book.releaseYear > 60;
+    return oldBook = 2021 - book.releaseYear > 60;
   }).sort((a, b) => a.releaseYear - b.releaseYear);
 }
 assert.deepStrictEqual(oldBooksOrdered(), expectedResult4);
@@ -201,3 +201,15 @@ function fantasyOrScienceFictionAuthors() {
   }).map((book) => book.author.name).sort();
 }
 assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult5);
+
+// 6. Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+const expectedResult6 = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
+
+function oldBooks() {
+  return books.filter((book) => (2021 - book.releaseYear > 60)).map((book) => book.name);
+}
+assert.deepStrictEqual(oldBooks(), expectedResult6);
