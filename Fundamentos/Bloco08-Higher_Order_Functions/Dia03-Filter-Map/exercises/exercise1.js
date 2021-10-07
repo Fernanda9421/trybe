@@ -213,3 +213,12 @@ function oldBooks() {
   return books.filter((book) => (2021 - book.releaseYear > 60)).map((book) => book.name);
 }
 assert.deepStrictEqual(oldBooks(), expectedResult6);
+
+// 7. Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais
+const expectedResult7 = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  const findName = books.find((book) => book.author.name[1, 4, 7] === '.');
+  return findName.name;
+}
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult7);
