@@ -1,37 +1,37 @@
-const coolestTvShow = {
-  name: "BoJack Horseman",
-  genre: "adult animation",
-  createdBy: "Raphael Bob-Waksberg",
-  favoriteCharacter: "Princess Carolyn",
-  quote: "Princess Carolyn always lands on her feet.",
-  seasons: 6,
+// const coolestTvShow = {
+//   name: "BoJack Horseman",
+//   genre: "adult animation",
+//   createdBy: "Raphael Bob-Waksberg",
+//   favoriteCharacter: "Princess Carolyn",
+//   quote: "Princess Carolyn always lands on her feet.",
+//   seasons: 6,
+// };
+
+// for (let key in coolestTvShow) {
+//   console.log(key); // lista as chaves
+//   console.log(coolestTvShow[key]); // lista os valores
+// }
+
+const student1 = {
+  Html: 'Muito Bom',
+  Css: 'Bom',
+  JavaScript: 'Ótimo',
+  SoftSkills: 'Ótimo',
 };
 
-for (let key in coolestTvShow) {
-  console.log(key); // lista as chaves
-  console.log(coolestTvShow[key]); // lista os valores
+const student2 = {
+  Html: 'Bom',
+  Css: 'Ótimo',
+  JavaScript: 'Ruim',
+  SoftSkills: 'Ótimo',
+  Git: 'Bom', // chave adicionada
+};
+
+const skills = (student) => {
+  const skillsArray = Object.keys(student);
+  for (let key in skillsArray) {
+    console.log(`${skillsArray[key]}, Nível: ${student[skillsArray[key]]}`);
+  }
 }
-
-// const student1 = {
-//   Html: 'Muito Bom',
-//   Css: 'Bom',
-//   JavaScript: 'Ótimo',
-//   SoftSkills: 'Ótimo',
-// };
-
-// const student2 = {
-//   Html: 'Bom',
-//   Css: 'Ótimo',
-//   JavaScript: 'Ruim',
-//   SoftSkills: 'Ótimo',
-//   Git: 'Bom', // chave adicionada
-// };
-
-// const skills = (student) => {
-//   const skillsArray = Object.keys(student);
-//   for (let key in skillsArray) {
-//     console.log(`${skillsArray[key]}, Nível: ${student[skillsArray[key]]}`);
-//   }
-// }
-// skills(student1);
-// skills(student2);
+skills(student1);
+skills(student2);
