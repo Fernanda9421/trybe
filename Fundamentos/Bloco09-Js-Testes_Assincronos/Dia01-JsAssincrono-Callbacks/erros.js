@@ -18,7 +18,7 @@ const getCountry = (onSuccess, onError) => {
     }
     else {
       const errorMessage = "Country could not be found";
-      return onError(errorMessage);
+      onError(errorMessage);
     }
   }, delay());
 };
