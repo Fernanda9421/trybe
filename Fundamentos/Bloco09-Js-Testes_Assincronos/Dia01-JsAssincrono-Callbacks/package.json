@@ -1,0 +1,16 @@
+{
+  "name": "Dia01-JsAssincrono-Callbacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "callbackFixacao.js",
+  "dependencies": {
+    "jest": "^27.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
