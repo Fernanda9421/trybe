@@ -1,0 +1,37 @@
+.header {
+  background-color: darkolivegreen;
+  color: white;
+  text-align: center;
+  height: 4rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid darkolivegreen;
+  width: 20%;
+  border-radius: 8px;
+}
+
+.container-content h4 {
+  font-weight: 400;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 5rem;
+}
