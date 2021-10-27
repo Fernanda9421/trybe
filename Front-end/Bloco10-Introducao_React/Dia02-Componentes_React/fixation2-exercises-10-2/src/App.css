@@ -1,0 +1,14 @@
+.section-albums {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.div-albums {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img {
+  width: 200px;
+}
