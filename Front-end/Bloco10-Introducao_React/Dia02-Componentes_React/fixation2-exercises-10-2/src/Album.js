@@ -2,17 +2,19 @@ import React, { Component } from 'react'
 
 class Album extends Component {
   render() {
+    const { image, title, releaseDate, others } = this.props.album;
+
     return (
       <section className='section-albums'>
-        <img className='img' src={ this.props.album.image } alt={ this.props.album.title } />
-        <h2 className='title'>{ this.props.album.title }</h2>
-        <p className='paragraphs'>{ this.props.album.releaseDate.year }</p>
+        <img className='img' src={ image } alt={ title } />
+        <h2 className='title'>{ title }</h2>
+        <p className='paragraphs'>{ releaseDate.year }</p>
         <p className='paragraphs'>
           Lançamento:
-          { `${ this.props.album.releaseDate.day }/${ this.props.album.releaseDate.month }/${ this.props.album.releaseDate.year }` }
+          { `${ releaseDate.day }/${ releaseDate.month }/${ releaseDate.year }` }
         </p>
-        <p className='paragraphs'>Gravadora: { this.props.album.others.recordCompany }</p>
-        <p className='paragraphs'>Formatos: { this.props.album.others.formats }</p>
+        <p className='paragraphs'>Gravadora: { others.recordCompany }</p>
+        <p className='paragraphs'>Formatos: { others.formats }</p>
       </section>
     );
   }
