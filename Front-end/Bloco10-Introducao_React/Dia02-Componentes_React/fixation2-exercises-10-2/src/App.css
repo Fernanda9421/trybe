@@ -1,14 +1,8 @@
-.section-albums {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.div-albums {
+#root {
   display: flex;
   justify-content: space-around;
 }
 
-.img {
-  width: 200px;
+.div-albums {
+  text-align: center;
 }
