@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import './App.css';
-import pokemons from './Data';
 import Pokedex from './Pokedex';
 
 
@@ -10,7 +9,7 @@ class App extends Component {
       <>
         <h1 className='title'>Pokedex</h1>
         <div className='list-pokemons'>
-          <Pokedex pokemons={pokemons} />
+          <Pokedex  />
         </div>
       </>
     )
