@@ -17,8 +17,7 @@ const catalog = [
     image:
       "https://www.revistabula.com/wp/wp-content/uploads/2017/04/Game-of-Thrones.jpg.webp",
     characters: [
-      "Daenerys da Casa Targaryen, Primeira de seu nome, Nascida da tormenta, A não queimada, Mãe dos Dragões, Quebradora das correntes, Mãe dos escravos, Khaleesi dos Dothraki, Rainha de Mereen, Rainha de Westeros, Dos Ândalos, Dos Roinares.",
-      "Cersei Lannister"
+      "Daenerys", "Targaryen", "Jon Snow", "Cersei I Lannister", "Arya Stark", "Outros"
     ],
     genre: "Fantasia",
     info: {
