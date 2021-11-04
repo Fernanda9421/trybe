@@ -25,25 +25,40 @@ class Form extends Component {
   }
 
   render() {
-    const { name } = this.state;
+    const { name, age, favoriteLanguage, comments, receiveContent } = this.state;
 
     return (
       <div>
         <h1>Linguagens de programação</h1>
         <form className='form'>
-          <label>
+
+          <label htmlFor='name'>
             Nome:
-            <input type='text' name='name' onChange={this.handleChange}></input>
+            <input
+              value={name}
+              type='text'
+              name='name'
+              onChange={this.handleChange}
+            />
           </label>
 
-          <label>
+          <label htmlFor='age'>
             Idade:
-            <input type='number' name='age' onChange={this.handleChange}></input>
+            <input
+              value={age}
+              type='number'
+              name='age'
+              onChange={this.handleChange}
+            />
           </label>
 
-          <label>
+          <label htmlFor='favoriteLanguage'>
             Linguagem de programação preferida:
-            <select name='favoriteLanguage' onChange={this.handleChange}>
+            <select
+              value={favoriteLanguage}
+              name='favoriteLanguage'
+              onChange={this.handleChange}
+            >
               <option>Python</option>
               <option>Java</option>
               <option>JavaScript</option>
@@ -51,15 +66,26 @@ class Form extends Component {
             </select>
           </label>
 
-          <label>
+          <label htmlFor='comments'>
             Deixe seu comentário:
-            <textarea name='comments' onChange={this.handleChange}></textarea>
+            <textarea
+              value={comments}
+              name='comments'
+              onChange={this.handleChange}
+            />
           </label>
 
-          <label>
+          <label htmlFor='receiveContent'>
             Deseja receber conteúdos?
-            <input type='checkbox' name='receiveContent' onChange={this.handleChange}></input>
+            <input
+              value={receiveContent}
+              type='checkbox'
+              name='receiveContent'
+              onChange={this.handleChange}
+            />
           </label>
+
+          <input type="file" />
 
         </form>
       </div>
