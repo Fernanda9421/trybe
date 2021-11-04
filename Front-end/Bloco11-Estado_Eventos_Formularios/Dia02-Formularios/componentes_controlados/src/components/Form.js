@@ -5,23 +5,25 @@ class Form extends Component {
     super();
 
     this.state = {
-      nome: '',
-      idade: 0,
-      linguagemFavorita: '',
-      comentario: '',
+      name: '',
+      age: 0,
+      favoriteLanguage: '',
+      comments: '',
     }
 
-    this.trocaComentario = this.trocaComentario.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  trocaComentario(event) {
+  handleChange({ target }) {
+    const { name, value } = target;
+
     this.setState({
-      comentario: event.target.value
+      [name]: value,
     })
   }
 
   render() {
-    const { comentario } = this.state;
+    const { name } = this.state;
 
     return (
       <div>
@@ -29,17 +31,17 @@ class Form extends Component {
         <form className='form'>
           <label>
             Nome:
-            <input type='text' name='nome'></input>
+            <input type='text' name='name' onChange={this.handleChange}></input>
           </label>
 
           <label>
             Idade:
-            <input type='number' name='idade'></input>
+            <input type='number' name='age' onChange={this.handleChange}></input>
           </label>
 
           <label>
             Linguagem de programação preferida:
-            <select name='linguagemFavorita'>
+            <select name='favoriteLanguage' onChange={this.handleChange}>
               <option>Python</option>
               <option>Java</option>
               <option>JavaScript</option>
@@ -49,7 +51,7 @@ class Form extends Component {
 
           <label>
             Deixe seu comentário:
-            <textarea value={comentario} onChange={this.trocaComentario}></textarea>
+            <textarea name='comments' onChange={this.handleChange}></textarea>
           </label>
 
         </form>
