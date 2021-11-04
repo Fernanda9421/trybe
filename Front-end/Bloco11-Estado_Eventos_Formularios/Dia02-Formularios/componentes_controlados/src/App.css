@@ -6,3 +6,8 @@
 label {
   margin: 10px;
 }
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
