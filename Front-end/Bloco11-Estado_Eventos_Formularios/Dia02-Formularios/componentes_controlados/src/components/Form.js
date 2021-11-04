@@ -9,13 +9,15 @@ class Form extends Component {
       age: 0,
       favoriteLanguage: '',
       comments: '',
+      receiveContent: false,
     }
 
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange({ target }) {
-    const { name, value } = target;
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
 
     this.setState({
       [name]: value,
@@ -52,6 +54,11 @@ class Form extends Component {
           <label>
             Deixe seu comentário:
             <textarea name='comments' onChange={this.handleChange}></textarea>
+          </label>
+
+          <label>
+            Deseja receber conteúdos?
+            <input type='checkbox' name='receiveContent' onChange={this.handleChange}></input>
           </label>
 
         </form>
