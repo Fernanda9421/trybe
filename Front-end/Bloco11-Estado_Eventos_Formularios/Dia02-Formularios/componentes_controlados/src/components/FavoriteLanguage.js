@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 class FavoriteLanguage extends Component {
   render() {
-    const { favoriteLanguage, handleChange } = this.props;
+    const { value, handleChange } = this.props;
 
     return (
       <label htmlFor='favoriteLanguage'>
         Linguagem de programação preferida:
         <select
-          value={favoriteLanguage}
+          value={value}
           name='favoriteLanguage'
           onChange={handleChange}
         >

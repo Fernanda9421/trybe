@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 class Age extends Component {
   render() {
-    const { age, handleChange } = this.props;
+    const { value, handleChange } = this.props;
 
     return (
       <label htmlFor='age'>
         Idade:
         <input
-          value={age}
+          value={value}
           type='number'
           name='age'
           onChange={handleChange}
