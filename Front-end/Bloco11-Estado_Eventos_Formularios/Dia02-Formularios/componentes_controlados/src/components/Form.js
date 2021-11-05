@@ -15,9 +15,28 @@ class Form extends Component {
       favoriteLanguage: '',
       comments: '',
       receiveContent: false,
+      formError: true,
     }
 
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleError() {
+    const { name, age, favoriteLanguage, comments, receiveContent } = this.state;
+
+    const errors = [
+      !name.length,
+      !age.length,
+      !favoriteLanguage.length,
+      !comments.length,
+      !receiveContent,
+    ];
+
+    const completedForm = errors.every((error) => error !== true);
+
+    this.setState({
+      formError: !completedForm
+    });
   }
 
   handleChange({ target }) {
@@ -26,11 +45,11 @@ class Form extends Component {
 
     this.setState({
       [name]: value,
-    })
+    }, () => { this.handleError() })
   }
 
   render() {
-    const { name, age, favoriteLanguage, comments, receiveContent } = this.state;
+    const { name, age, favoriteLanguage, comments, receiveContent, formError } = this.state;
 
     return (
       <div>
@@ -39,7 +58,7 @@ class Form extends Component {
           <fieldset>
             <legend>Informações pessoais</legend>
             <Name value={name} handleChange={this.handleChange} />
-            <Age value={age} handleChange={this.handleChange} />  
+            <Age value={Number(age)} handleChange={this.handleChange} />  
           </fieldset>
 
           <fieldset>
@@ -60,6 +79,10 @@ class Form extends Component {
           <ReceiveContent value={receiveContent} handleChange={this.handleChange} />
 
         </form>
+
+        { formError 
+        ? <span style={ { color: 'red' } }>Preencha todos os campos</span>
+        : <span style={ { color: 'green' } }>Todos campos foram preenchidos</span> }
       </div>
     )
   }
