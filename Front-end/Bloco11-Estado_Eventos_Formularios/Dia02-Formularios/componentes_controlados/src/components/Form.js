@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import Name from "./Name";
+import Age from "./Age";
+import FavoriteLanguage from "./FavoriteLanguage";
+import Comments from "./Comments";
+import ReceiveContent from "./ReceiveContent";
 
 class Form extends Component {
   constructor() {
@@ -33,55 +38,18 @@ class Form extends Component {
         <form className='form'>
           <fieldset>
             <legend>Informações pessoais</legend>
-
-            <label htmlFor='name'>
-              Nome:
-              <input
-                value={name}
-                type='text'
-                name='name'
-                onChange={this.handleChange}
-              />
-            </label>
-
-            <label htmlFor='age'>
-              Idade:
-              <input
-                value={age}
-                type='number'
-                name='age'
-                onChange={this.handleChange}
-              />
-            </label>
+            <Name value={name} handleChange={this.handleChange} />
+            <Age value={age} handleChange={this.handleChange} />  
           </fieldset>
 
           <fieldset>
-            <legend>Preferências</legend>
-            <label htmlFor='favoriteLanguage'>
-              Linguagem de programação preferida:
-              <select
-                value={favoriteLanguage}
-                name='favoriteLanguage'
-                onChange={this.handleChange}
-              >
-                <option>Python</option>
-                <option>Java</option>
-                <option>JavaScript</option>
-                <option>C++</option>
-              </select>
-            </label>
+            <legend>Preferências</legend>           
+            <FavoriteLanguage value={favoriteLanguage} handleChange={this.handleChange} />
           </fieldset>
 
           <fieldset>
-            <legend>Comentários</legend>
-            <label htmlFor='comments'>
-              Deixe seu comentário:
-              <textarea
-                value={comments}
-                name='comments'
-                onChange={this.handleChange}
-              />
-            </label>
+            <legend>Comentários</legend> 
+            <Comments value={comments} handleChange={this.handleChange} />
           </fieldset>
 
           <fieldset>
@@ -89,15 +57,7 @@ class Form extends Component {
             <input type="file" />
           </fieldset>
 
-          <label htmlFor='receiveContent'>
-            Deseja receber conteúdos?
-            <input
-              value={receiveContent}
-              type='checkbox'
-              name='receiveContent'
-              onChange={this.handleChange}
-            />
-          </label>
+          <ReceiveContent value={receiveContent} handleChange={this.handleChange} />
 
         </form>
       </div>
