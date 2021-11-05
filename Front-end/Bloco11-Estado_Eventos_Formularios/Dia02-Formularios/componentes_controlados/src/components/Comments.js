@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class Comments extends Component {
   render() {
@@ -20,6 +21,11 @@ class Comments extends Component {
       </label>
     );
   }
+}
+
+Comments.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 }
 
 export default Comments;

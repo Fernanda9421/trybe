@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class FavoriteLanguage extends Component {
   render() {
@@ -20,6 +21,11 @@ class FavoriteLanguage extends Component {
       </label>
     );
   }
+}
+
+FavoriteLanguage.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 }
 
 export default FavoriteLanguage;

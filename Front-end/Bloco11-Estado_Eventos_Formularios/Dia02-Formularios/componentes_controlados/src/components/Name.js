@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class Name extends Component {
   render() {
@@ -21,6 +22,11 @@ class Name extends Component {
       </label>
     );
   }
+}
+
+Name.propTypes = {
+  value: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 }
 
 export default Name;

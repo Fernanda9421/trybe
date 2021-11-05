@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 class Age extends Component {
   render() {
@@ -16,6 +17,11 @@ class Age extends Component {
       </label>
     );
   }
+}
+
+Age.propTypes = {
+  value: PropTypes.number.isRequired,
+  handleChange: PropTypes.func.isRequired,
 }
 
 export default Age;
