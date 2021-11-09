@@ -53,7 +53,7 @@ class DadJoke extends Component {
           {storedJokes.map(({ id, joke }) => (<p key={id}>{joke}</p>))}
         </span>
 
-        <p>{jokeObj === undefined ? loadingElement : jokeObj.joke}</p>
+        <p>{ jokeObj === undefined ? loadingElement : this.renderJokeElement() }</p>
 
       </div>
     );
