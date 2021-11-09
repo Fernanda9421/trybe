@@ -29,7 +29,11 @@ class DadJoke extends Component {
   }
 
   saveJoke() {
-    //
+    this.setState(({ storedJokes ,jokeObj }) => ({
+      storedJokes: [...storedJokes, jokeObj]
+    }));
+
+    this.fetchJoke();
   }
 
   renderJokeElement() {
