@@ -1,10 +1,13 @@
 import './App.css';
 import React, { Component } from 'react'
+import DadJoke from './components/DadJoke';
 
 class App extends Component {
   render() {
     return (
-      <h1>Olá</h1>
+      <>
+        <DadJoke />
+      </>
     );
   }
 }
