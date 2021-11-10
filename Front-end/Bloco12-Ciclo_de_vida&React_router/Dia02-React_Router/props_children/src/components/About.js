@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class About extends Component {
   render() {
     return (
-      <span>About - Renderização</span>
+      <div>
+        <p>About - Renderização</p>
+      </div>
     );
   }
 }

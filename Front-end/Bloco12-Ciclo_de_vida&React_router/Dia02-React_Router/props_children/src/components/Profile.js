@@ -2,8 +2,9 @@ import React, { Component } from "react";
 
 class Profile extends Component {
   render() {
+    const { city } = this.props.match.params;
     return (
-      <span>Profile - Renderização</span>
+      <p>Profile - {this.props.name}, de {city}</p>
     )
   }
 }
