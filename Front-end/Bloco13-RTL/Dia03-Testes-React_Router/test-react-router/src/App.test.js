@@ -28,4 +28,14 @@ describe('teste da aplicação toda', () => {
       { name: 'Você está na página Sobre' });
     expect(aboutTitle).toBeInTheDocument();
   });
+
+  it('deve testar um caminho não existente e a renderização do Not Found', () => {
+    const { history } = renderWithRouter(<App />);
+
+    history.push('/pagina/que-nao-existe/');
+
+    const notFoundTitle = screen.getByRole('heading',
+      { name: 'Página não encontrada' });
+    expect(notFoundTitle).toBeInTheDocument();
+  });
 });
