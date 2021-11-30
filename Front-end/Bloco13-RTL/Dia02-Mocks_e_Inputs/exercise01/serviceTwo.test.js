@@ -16,5 +16,13 @@ describe('Testa implementações', () => {
     expect(serviceTwo.firstLetter).toHaveBeenCalled();
     expect(serviceTwo.firstLetter).toHaveBeenCalledWith('camelo');
     expect(serviceTwo.firstLetter).toHaveBeenCalledTimes(1);
+  });
+
+  it('Verifica se as strings são concatenadas', () => {
+    serviceTwo.concat = jest.fn().mockImplementation((str1, str2, str3) => `${str1}${str2}${str3}`);
+    expect(serviceTwo.concat('Sou', 'Estudante', 'Trybe')).toBe('SouEstudanteTrybe');
+    expect(serviceTwo.concat).toHaveBeenCalled();
+    expect(serviceTwo.concat).toHaveBeenCalledTimes(1);
+    expect(serviceTwo.concat).toHaveBeenCalledWith('Sou', 'Estudante', 'Trybe');
   })
 })
