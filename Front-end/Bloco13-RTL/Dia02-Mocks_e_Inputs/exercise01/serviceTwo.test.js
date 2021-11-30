@@ -8,6 +8,9 @@ describe('Testa implementações', () => {
     expect(serviceTwo.upperCase).toHaveBeenCalled();
     expect(serviceTwo.upperCase).toHaveBeenCalledWith('CAMELO');
     expect(serviceTwo.upperCase).toHaveBeenCalledTimes(1);
+
+    serviceTwo.upperCase.mockRestore();
+    expect(serviceTwo.upperCase).not.toHaveBeenCalled();
   });
 
   it('Verifica se retorna a ultima letra da string', () => {
@@ -24,5 +27,5 @@ describe('Testa implementações', () => {
     expect(serviceTwo.concat).toHaveBeenCalled();
     expect(serviceTwo.concat).toHaveBeenCalledTimes(1);
     expect(serviceTwo.concat).toHaveBeenCalledWith('Sou', 'Estudante', 'Trybe');
-  })
+  });
 })
