@@ -31,3 +31,9 @@ buttonPrevious.addEventListener('click', () => {
 });
 
 const store = Redux.createStore(reducer);
+
+store.subscribe(() => {
+  const { colors, index } = store.getState();
+  document.querySelector('#value').innerHTML = colors[index];
+  document.querySelector('#container').style.backgroundColor = colors[index];
+});
