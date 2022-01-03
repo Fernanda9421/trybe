@@ -1,5 +1,3 @@
-const Redux = require('redux');
-
 const ESTADO_INICIAL = {
   colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
   index: 0,
@@ -21,5 +19,15 @@ const reducer = (state = ESTADO_INICIAL, action) => {
       return state;
   }
 }
+
+const buttonNext = document.querySelector('#next');
+buttonNext.addEventListener('click', () => {
+  store.dispatch({ type: 'NEXT_COLOR' });
+});
+
+const buttonPrevious = document.querySelector('#previous');
+buttonPrevious.addEventListener('click', () => {
+  store.dispatch({ type: 'PREVIOUS_COLOR'});
+});
 
 const store = Redux.createStore(reducer);
