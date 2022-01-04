@@ -1,3 +1,10 @@
+const showCountValue = (counter) => {
+  const titleValue = document.querySelector('#counter');
+  titleValue.innerHTML = counter;
+}
+
+showCountValue(0);
+
 // ACTION TYPES
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
