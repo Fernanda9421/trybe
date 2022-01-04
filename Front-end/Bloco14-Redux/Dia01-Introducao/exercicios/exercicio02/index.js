@@ -24,18 +24,25 @@ const INITIAL_STATE = {
 
 // REDUCER
 const reducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
-    case INCREMENT:
-      return {
-        number: state.number + 1,
-      }
-    case DECREMENT:
-      return {
-        number: state.number - 1,
-      }
-    default:
-      return state;
-  }
+  const types = {
+    INCREMENT: { number: state.number + 1 },
+    DECREMENT: { number: state.number - 1 },
+  };
+
+  return types[action.type];
+
+  // switch(action.type) {
+  //   case INCREMENT:
+  //     return {
+  //       number: state.number + 1,
+  //     }
+  //   case DECREMENT:
+  //     return {
+  //       number: state.number - 1,
+  //     }
+  //   default:
+  //     return state;
+  // }
 }
 
 // STORE
