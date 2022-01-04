@@ -43,5 +43,11 @@ const store = Redux.createStore(reducer);
 
 store.subscribe(() => {
   const { number } = store.getState();
-  console.log(number);
-})
+  showCountValue(number);
+});
+
+const btnInc = document.querySelector('#inc');
+const btnDec = document.querySelector('#dec');
+
+btnInc.addEventListener('click', actionInc);
+btnDec.addEventListener('click', actionDec);
