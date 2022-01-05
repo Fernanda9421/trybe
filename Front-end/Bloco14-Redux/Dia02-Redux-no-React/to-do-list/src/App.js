@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import InputList from './Components/InputList';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        To Do List
-      </div>
+      <InputList />
     );
   }
 }
