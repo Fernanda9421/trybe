@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addElement } from '../actions';
 
 class InputList extends Component {
   constructor(props) {
@@ -10,6 +12,9 @@ class InputList extends Component {
   }
 
   render() {
+    const { add } = this.props;
+    const { inputValue } = this.state;
+
     return (
       <div>
         <input
@@ -17,7 +22,7 @@ class InputList extends Component {
           placeholder="Digite a tarefa"
           onChange={ (event) => this.setState ({ inputValue: event.target.value }) }
         />
-        <button type="button" onClick={ () => {} }>
+        <button type="button" onClick={ () => add(inputValue) }>
           Adicionar Tarefa
         </button>
       </div>
@@ -25,4 +30,8 @@ class InputList extends Component {
   }
 }
 
-export default InputList;
+const mapDispatchToProps = (dispatch) => ({
+  add: (value) => dispatch(addElement(value)),
+})
+
+export default connect(null, mapDispatchToProps)(InputList);
