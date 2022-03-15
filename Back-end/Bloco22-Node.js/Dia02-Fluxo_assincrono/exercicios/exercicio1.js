@@ -10,6 +10,11 @@ const math = (num1, num2, num3) => {
   return promise;
 }
 
-math(3, 5, 2)
+const randomNumber = () => {
+  const random = Math.floor(Math.random() * 100 + 1);
+  return random;
+}
+
+math(randomNumber(), randomNumber(), randomNumber())
   .then((result) => console.log(result))
   .catch((error) => console.error(error.message));
