@@ -11,10 +11,18 @@ const math = (num1, num2, num3) => {
 }
 
 const randomNumber = () => {
-  const random = Math.floor(Math.random() * 100 + 1);
-  return random;
+  return Math.floor(Math.random() * 100 + 1);
 }
 
-math(randomNumber(), randomNumber(), randomNumber())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error.message));
+const callDoMath = async () => {
+  const randomNumbers = Array.from({ length: 3 }).map(randomNumber);
+
+  try {
+    const result = await math(...randomNumbers)
+    console.log(result);
+  } catch (error) {
+    console.error(error.message)
+  }
+}
+
+callDoMath();
