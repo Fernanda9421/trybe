@@ -38,6 +38,16 @@ app.get('/simpsons', rescue(async (_req, res) => {
   res.status(200).json(simpsons);
 }));
 
+// exercício 6
+app.get('/simpsons/:id', rescue(async (req, res) => {
+  const { id } = req.params;
+  const simpsons = await simpsonsUtils.readFileSimpsons();
+  const findSimpsonById = simpsons.find((s) => s.id === id);
+
+  if(!findSimpsonById) return res.status(404).json({ message: 'simpson not found' });
+  res.status(200).json(findSimpsonById);
+}));
+
 app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
 });
