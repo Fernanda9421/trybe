@@ -48,6 +48,18 @@ app.get('/simpsons/:id', rescue(async (req, res) => {
   res.status(200).json(findSimpsonById);
 }));
 
+// exercício 7
+app.post('/simpsons', rescue(async (req, res) => {
+  const { id, name } = req.body;
+  const simpsons = await simpsonsUtils.readFileSimpsons();
+  const findId = simpsons.find((simpson) => simpson.id === id);
+  if (findId) return res.status(409).json({ message: 'id already exists' });
+
+  simpsons.push({ id, name });
+  await simpsonsUtils.writeFileSimpsons(simpsons);
+  res.status(204).end();
+}));
+
 app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
 });
