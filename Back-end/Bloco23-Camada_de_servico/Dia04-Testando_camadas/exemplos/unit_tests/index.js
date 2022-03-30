@@ -7,6 +7,7 @@ const movieControler = require('./controllers/movieController');
 
 app.use(express.json());
 
+app.get('/movie/:id', movieControler.getById);
 app.post('/movie', movieControler.create);
 
 app.listen(PORT, () => {
