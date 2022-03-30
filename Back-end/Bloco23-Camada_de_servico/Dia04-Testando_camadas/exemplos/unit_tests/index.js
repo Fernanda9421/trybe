@@ -7,7 +7,7 @@ const movieControler = require('./controllers/movieController');
 
 app.use(express.json());
 
-app.post('/movie', movieControler);
+app.post('/movie', movieControler.create);
 
 app.listen(PORT, () => {
   console.log(`Ouvindo na porta ${PORT}`);
