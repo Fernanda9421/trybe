@@ -16,4 +16,24 @@ router.get('/', async (_req, res) => {
   };
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const employee = await Employee.findOne({
+      where: { id },
+      include: [{
+        model: Address, as: 'addresses',
+        attributes: { exclude: ['number'] },
+      }],
+    });
+
+    if (!employee) return res.status(404).json({ message: 'Funcionário não encontrado' });
+
+    return res.status(200).json(employee);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ message: 'Ocorreu um erro' });
+  }
+});
+
 module.exports = router;
