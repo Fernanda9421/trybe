@@ -16,19 +16,46 @@ router.get('/', async (_req, res) => {
   };
 });
 
+// EAGER LOADING
+// router.get('/:id', async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const employee = await Employee.findOne({
+//       where: { id },
+//       include: [{
+//         model: Address, as: 'addresses',
+//         attributes: { exclude: ['number'] },
+//       }],
+//     });
+
+//     if (!employee) return res.status(404).json({ message: 'Funcionário não encontrado' });
+
+//     return res.status(200).json(employee);
+//   } catch (error) {
+//     console.log(error.message);
+//     return res.status(500).json({ message: 'Ocorreu um erro' });
+//   }
+// });
+
+// LAZY LOADING
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    const { includeAddresses } = req.query;
+  
     const employee = await Employee.findOne({
-      where: { id },
-      include: [{
-        model: Address, as: 'addresses',
-        attributes: { exclude: ['number'] },
-      }],
+      where: { id }
     });
-
+  
     if (!employee) return res.status(404).json({ message: 'Funcionário não encontrado' });
-
+  
+    if (includeAddresses) {
+      const addresses = await Address.findAll({
+        where: { employeeId: id }
+      });
+      return res.status(200).json({ employee, addresses });
+    }
+  
     return res.status(200).json(employee);
   } catch (error) {
     console.log(error.message);
