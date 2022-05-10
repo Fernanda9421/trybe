@@ -23,6 +23,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Sum = __importStar(require("./fixacao"));
-console.log(Sum.sum({ num1: 10, num2: 25 }));
-console.log(Sum.showAddress({ street: 'Cidade de Brasília', number: 4, city: 'Sintra' }));
+const Fixacao = __importStar(require("./fixacao"));
+console.log(Fixacao.sum({ num1: 10, num2: 25 }));
+console.log(Fixacao.showAddress({ street: 'Cidade de Brasília', number: 4, city: 'Sintra' }));
+console.log(Fixacao.docId(12312312541));
+console.log(Fixacao.docId('12312312541'));

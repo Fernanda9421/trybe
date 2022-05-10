@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.showAddress = exports.sum = void 0;
+exports.docId = exports.showAddress = exports.sum = void 0;
 function sum(n) {
     return `A soma dos números é ${n.num1 + n.num2}`;
 }
@@ -11,3 +11,7 @@ function showAddress(a) {
   City: ${a.city}`;
 }
 exports.showAddress = showAddress;
+function docId(id) {
+    return `Identidade: ${id}`;
+}
+exports.docId = docId;

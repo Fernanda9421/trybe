@@ -18,3 +18,10 @@ export function showAddress(a: Address):string {
   Number: ${a.number}
   City: ${a.city}`
 }
+
+type PhysicalStatesOfMatter = "liquid" | "solid" | "gaseous";
+type SO = "linux" | "mac os" | "windows";
+
+export function docId(id: number | string):string {
+  return `Identidade: ${id}`;
+}
