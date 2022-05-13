@@ -1,4 +1,4 @@
-import { RowDataPacket } from "mysql2";
+import { ResultSetHeader, RowDataPacket } from "mysql2";
 import IUser from "../interfaces/user.interface";
 import connection from "./connection";
 
@@ -14,5 +14,17 @@ export default class UserModel {
     const [user] = await connection.execute<RowDataPacket[]>(query, [id]);
 
     return user[0] as IUser;
+  };
+
+  public getByEmail = async (email:string) => {
+    const query = 'SELECT * FROM TypeScriptExpress.Users WHERE email = ?;';
+    const [data] = await connection.execute<RowDataPacket[]>(query, [email]);
+    return data[0] as IUser;
+  };
+  
+  public createUser = async (name:string, email:string, password:string):Promise<IUser> => {
+    const query = 'INSERT INTO TypeScriptExpress.Users (name, email, password) VALUES (?, ?, ?);';
+    const [user] = await connection.execute<ResultSetHeader>(query, [name, email, password]);
+    return {id: user.insertId, name, email, password };
   };
 }

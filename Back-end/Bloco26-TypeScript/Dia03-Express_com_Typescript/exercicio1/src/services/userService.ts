@@ -1,15 +1,6 @@
 import IUser from "../interfaces/user.interface";
 import UserModel from "../models/userModel";
 
-const STATUS = {
-  codeOK: 200,
-  codeNotFound: 404
-}
-
-const MESSAGES = {
-  userNotFound: 'User not found!'
-}
-
 export default class UserService {
   public model = new UserModel();
 
@@ -20,7 +11,16 @@ export default class UserService {
 
   public getById = async (id: number): Promise<IUser> => {
     const user = await this.model.getById(id);
+    return user;
+  }
 
+  public createUser = async(name:string, email:string, password:string):Promise<IUser|null> => {
+    const userExists = await this.model.getByEmail(email);
+    if (userExists) {
+      return null;
+    }
+
+    const user = await this.model.createUser(name, email, password);
     return user;
   }
 }
