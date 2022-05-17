@@ -9,5 +9,6 @@ const route = Router();
 route.get('/', userController.getAll);
 route.get('/:id', userController.getById);
 route.post('/', validateName, validateEmail, validatePassword, userController.createUser);
+route.put('/:id', userController.updateUser);
 
 export default route;

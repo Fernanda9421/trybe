@@ -1,5 +1,5 @@
 import UserService from "../services/userService";
-import { NextFunction, Request, Response } from "express";
+import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 
 export default class UserController {
@@ -19,12 +19,23 @@ export default class UserController {
       : res.status(StatusCodes.OK).json(user)
   }
 
-  public createUser = async(req:Request, res:Response, next:NextFunction):Promise<Response | void> => {
+  public createUser = async(req:Request, res:Response):Promise<Response | void> => {
     const { name, email, password } = req.body;
     const user = await this.service.createUser(name, email, password);
 
     !user
       ? res.status(StatusCodes.CONFLICT).json({ message: 'User already exists!' })
       : res.status(StatusCodes.OK).json(user)
+  }
+
+  public updateUser = async(req:Request, res:Response):Promise<Response|void> => {
+    const { id } = req.params;
+    const { name, email, password } = req.body;
+
+    const user = await this.service.updateUser(name, email, password, Number(id));
+
+    !user
+      ? res.status(StatusCodes.NOT_FOUND).json({ message: 'User not found!' })
+      : res.status(StatusCodes.OK).json(user);
   }
 }

@@ -23,4 +23,11 @@ export default class UserService {
     const user = await this.model.createUser(name, email, password);
     return user;
   }
+
+  public updateUser = async(name:string, email:string, password:string, id:number ):Promise<IUser|null> => {
+    const user = await this.model.updateUser(name, email, password, id);
+    if (!user) return null;
+
+    return user;
+  }
 }
