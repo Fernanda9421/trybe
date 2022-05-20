@@ -8,16 +8,18 @@
 //     - O nome tem que possuir no mínimo 3 caracteres
 
 export default class Subject {
-  private _name: string;
-
-  constructor(name:string) {
-    this._name = name;
+  constructor(private _name:string) {
+    this.setName = _name;
   }
 
-  get name() { return this._name; };
+  get getName():string { return this._name; };
 
-  set name(value:string) {
-    if (value.length < 3) throw new Error('name must be at least 3 characters long');
+  set setName(value:string) {   
+    this.validationName(value);
     this._name = value;
+  }
+
+  validationName(value:string):void {
+    if (value.length < 3) throw new Error('name must be at least 3 characters long');
   }
 }

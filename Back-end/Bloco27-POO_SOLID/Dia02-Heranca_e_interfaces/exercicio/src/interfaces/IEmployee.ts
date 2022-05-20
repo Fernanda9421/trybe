@@ -7,7 +7,7 @@
 //     - generateRegistration: retorna uma string única gerada como registro
 
 export default interface IEmployee {
-  registration:number;
+  registration:string;
   salary:number;
   admissionDate:Date;
 
