@@ -18,57 +18,59 @@
 //     - A pessoa estudante deve possuir no máximo 2 notas de trabalhos
 
 import Person from "./Person";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 export default class Student extends Person {
-  private _enrollment: string;
-  private _examsGrades: number[] = [];
-  private _worksGrades: number[] = [];
+  private _enrollment:string;
+  private _examsGrades:number[];
+  private _worksGrades:number[];
 
   constructor(name:string, birthDate:Date) {
     super(name, birthDate);
 
     this._enrollment = this.generateEnrollment();
+    this._examsGrades = [];
+    this._worksGrades = [];
   }
 
-  get enrollment():string { return this._enrollment; };
+  get enrollment() { return this._enrollment };
 
   set enrollment(value:string) {
-    if (value.length < 16) {
-      throw new Error('Enrollment must be at least 16 characters long')
-    }
+    if (value.length < 16) throw new Error('A matrícula deve possuir no mínimo 16 caracteres');
+
     this._enrollment = value;
   }
 
-  get examsGrades() { return this._examsGrades; };
+  get examsGrades() { return this._examsGrades };
 
   set examsGrades(value: number[]) {
-    if (value.length > 4) {
-      throw new Error('Maximun 4 exams grades')
-    }
+    if (value.length > 4) throw new Error('O estudante deve possuir no máximo 4 notas de provas');
+
     this._examsGrades = value;
   }
 
-  get worksGrades() { return this._worksGrades; };
+  get worksGrades() { return this._worksGrades };
 
-  set worksGrades(value: number[]) {
-    if (value.length > 2) {
-      throw new Error('Maximun 2 works grades')
-    }
+  set worksGrades(value:number[]) {
+    if (value.length > 2) throw new Error('O estudante deve possuir no máximo 2 notas de trabalhos');
+
     this._worksGrades = value;
   }
 
-  sumGrades():number {
-    const sum = this._examsGrades.reduce((acc, crr) => acc + crr);
-    return sum;
+  generateEnrollment() {
+    const enrollment = uuidv4();
+    return enrollment;
   }
 
-  sumAverageGrade():number {
-    const items = this._examsGrades.length;
-    return this.sumGrades() / items;
+  sumGrades() {
+    const grades = [...this._examsGrades, ...this._worksGrades];
+    return grades.reduce((acc, crr) => acc + crr, 0);
   }
 
-  generateEnrollment():string {
-    return uuidv4();
+  sumAverageGrade() {
+    const gradesLength = this._examsGrades.length + this._worksGrades.length;
+    const sumGrades = this.sumGrades();
+
+    return sumGrades / gradesLength;
   }
 }

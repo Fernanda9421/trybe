@@ -1,27 +1,30 @@
-import Person from "./classes/Person";
-import Student from "./classes/Student";
-import Subject from "./classes/Subject";
-import Teacher from "./classes/Teacher";
+import Person from "./Person";
+import Student from "./Student";
+import Subject from "./Subject";
+import Teacher from "./Teacher";
 
-// Person
-const person1 = new Person('Fernanda', new Date('1994/09/21'));
-const person2 = new Person('Paulo', new Date('1991/07/03'));
+const person1 = new Person('Fer', new Date('2000/03/03'));
+const person2 = new Person('Kamila', new Date('2022/01/28'));
 
-console.log(person1);
-console.log(person2);
-console.log(person2.name);
+person1.birthDate = new Date('2020/03/03');
 
-// Student
-const student1 = new Student('Fernanda', new Date('2005/03/17'));
+// console.log(person1);
+// console.log(person2);
 
-student1.examsGrades = [23, 12, 36, 15];
-console.log(student1.sumGrades());
-console.log(student1);
+const student1 = new Student('Carolina', new Date('2000/03/20'));
+student1.examsGrades = [10, 7, 9, 8];
+student1.worksGrades = [7]
 
-// Subject
+// console.log(student1.sumAverageGrade());
+
 const subject1 = new Subject('Matemática');
-console.log(subject1);
+const subject2 = new Subject('História');
 
-// Teacher
-const teacher1 = new Teacher('Gabi', new Date('1989/02/19'), 8500, subject1);
+// console.log(subject1);
+
+const teacher1 = new Teacher('Paula', new Date('1991/03/28'), 2500, subject1);
+
+teacher1.admissionDate = new Date('2024/02/02');
+
 console.log(teacher1);
+

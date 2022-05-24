@@ -9,19 +9,16 @@
 //     - O nome tem que possuir no mínimo 3 caracteres
 Object.defineProperty(exports, "__esModule", { value: true });
 class Subject {
-    constructor(_name) {
-        this._name = _name;
-        this.setName = _name;
+    constructor(name) {
+        this._name = name;
+        this.name = name;
     }
-    get getName() { return this._name; }
+    get name() { return this._name; }
     ;
-    set setName(value) {
-        this.validationName(value);
-        this._name = value;
-    }
-    validationName(value) {
+    set name(value) {
         if (value.length < 3)
-            throw new Error('name must be at least 3 characters long');
+            throw new Error('O nome tem que possuir no mínimo 3 caracteres');
+        this._name = value;
     }
 }
 exports.default = Subject;
